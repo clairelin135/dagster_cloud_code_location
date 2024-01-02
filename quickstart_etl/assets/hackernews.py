@@ -17,7 +17,7 @@ from dagster import (
 
 
 @asset(
-    partitions_def=HourlyPartitionsDefinition(start_date="2023-01-01"),
+    partitions_def=HourlyPartitionsDefinition(start_date="2023-01-01-00:00"),
     backfill_policy=BackfillPolicy.single_run(),
 )
 def hourly_2023():
@@ -25,7 +25,7 @@ def hourly_2023():
 
 
 @asset(
-    partitions_def=HourlyPartitionsDefinition(start_date="2021-01-01"),
+    partitions_def=HourlyPartitionsDefinition(start_date="2021-01-01-00:00"),
     backfill_policy=BackfillPolicy.single_run(),
 )
 def hourly_2021():
@@ -33,7 +33,7 @@ def hourly_2021():
 
 
 @asset(
-    partitions_def=HourlyPartitionsDefinition(start_date="2019-01-01"),
+    partitions_def=HourlyPartitionsDefinition(start_date="2019-01-01-00:00"),
     backfill_policy=BackfillPolicy.single_run(),
 )
 def hourly_2019():
@@ -41,7 +41,7 @@ def hourly_2019():
 
 
 @asset(
-    partitions_def=HourlyPartitionsDefinition(start_date="2018-01-01"),
+    partitions_def=HourlyPartitionsDefinition(start_date="2018-01-01-00:00"),
     backfill_policy=BackfillPolicy.single_run(),
 )
 def hourly_2018():
