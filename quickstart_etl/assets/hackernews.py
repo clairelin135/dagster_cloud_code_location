@@ -17,7 +17,7 @@ import pendulum
 
 
 def get_dt(num_partitions):
-    return pendulum.datetime(2024, 1, 1, 0, 0, 0, 0, tz="UTC").subtract(
+    return pendulum.datetime(2024, 1, 2, 0, 0, 0, 0, tz="UTC").subtract(
         hours=num_partitions
     )
 
