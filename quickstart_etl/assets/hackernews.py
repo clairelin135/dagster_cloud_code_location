@@ -13,35 +13,6 @@ from dagster import (
     BackfillPolicy,
     DailyPartitionsDefinition,
 )
-import pendulum
-
-
-def get_dt(num_partitions):
-    return pendulum.datetime(2024, 1, 2, 0, 0, 0, 0, tz="UTC").subtract(
-        hours=num_partitions
-    )
-
-
-def get_assets():
-    assets = []
-    for n_interval in range(0, 175, 25):
-        num_partitions = n_interval * 1000
-        for asset_i in range(50):
-
-            @asset(
-                partitions_def=HourlyPartitionsDefinition(
-                    start_date=get_dt(num_partitions)
-                ),
-                backfill_policy=BackfillPolicy.single_run(),
-                group_name=f"{num_partitions}_partitions",
-                key=[str(num_partitions), f"asset_{asset_i}"],
-            )
-            def hourly_asset() -> MaterializeResult:
-                return MaterializeResult()
-
-            assets.append(hourly_asset)
-
-    return assets
 
 
 @asset(
