@@ -10,6 +10,7 @@ setup(
         "pandas",
         "matplotlib",
         "gql",
+        "requests_toolbelt",
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
