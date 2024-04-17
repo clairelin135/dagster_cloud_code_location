@@ -13,7 +13,7 @@ from dagster import (
     BackfillPolicy,
     DailyPartitionsDefinition,
 )
-from dagster_cloud.dagster_insights import dbt_with_bigquery_insights
+from dagster_plus.dagster_insights import dbt_with_bigquery_insights
 
 
 @asset(
