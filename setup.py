@@ -11,8 +11,6 @@ setup(
         "matplotlib",
         "gql",
         "requests_toolbelt",
-        "dagster-gcp==0.23.2rc3",
-        "dagster-dbt==0.23.2rc3",
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
