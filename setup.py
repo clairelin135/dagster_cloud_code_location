@@ -4,8 +4,8 @@ setup(
     name="quickstart_etl",
     packages=find_packages(exclude=["quickstart_etl_tests"]),
     install_requires=[
-        "dagster==1.7.2rc3",
-        "dagster-cloud==1.7.2rc3",
+        "dagster==1.7.2rc4",
+        "dagster-cloud==1.7.2rc4",
         "boto3",
         "pandas",
         "matplotlib",
